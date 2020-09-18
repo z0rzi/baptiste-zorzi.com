@@ -3239,76 +3239,59 @@ video {
   height: 100vh;
 }
 
-.text-xs {
+.text-xxs {
   font-size: 10pt;
+  line-height: 20pt;
+}
+
+.text-xs {
+  font-size: 15pt;
+  line-height: 25pt;
 }
 
 .text-s {
   font-size: 20pt;
+  line-height: 30pt;
 }
 
 .text-m {
   font-size: 30pt;
+  line-height: 40pt;
+}
+
+.text-l {
+  font-size: 40pt;
+  line-height: 50pt;
 }
 
 .text-xl {
+  font-size: 50pt;
+  line-height: 60pt;
+}
+
+.text-xxl {
   font-size: 60pt;
+  line-height: 70pt;
 }
 
-.leading-3 {
-  line-height: .75rem;
+.leading-xs {
+  line-height: 10pt;
 }
 
-.leading-4 {
-  line-height: 1rem;
+.leading-s {
+  line-height: 20pt;
 }
 
-.leading-5 {
-  line-height: 1.25rem;
+.leading-m {
+  line-height: 30pt;
 }
 
-.leading-6 {
-  line-height: 1.5rem;
+.leading-l {
+  line-height: 50pt;
 }
 
-.leading-7 {
-  line-height: 1.75rem;
-}
-
-.leading-8 {
-  line-height: 2rem;
-}
-
-.leading-9 {
-  line-height: 2.25rem;
-}
-
-.leading-10 {
-  line-height: 2.5rem;
-}
-
-.leading-none {
-  line-height: 1;
-}
-
-.leading-tight {
-  line-height: 1.25;
-}
-
-.leading-snug {
-  line-height: 1.375;
-}
-
-.leading-normal {
-  line-height: 1.5;
-}
-
-.leading-relaxed {
-  line-height: 1.625;
-}
-
-.leading-loose {
-  line-height: 2;
+.leading-xl {
+  line-height: 70pt;
 }
 
 .list-inside {
@@ -9066,6 +9049,30 @@ video {
   }
 }
 
+@keyframes laptopFloat {
+  0%, 100% {
+    transform: translateY(-5%) rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes shadowFloat {
+  0%, 100% {
+    filter: blur(25px);
+    width: 85%;
+    padding-top: 18%;
+  }
+
+  50% {
+    filter: blur(10px);
+    width: 80%;
+    padding-top: 15%;
+  }
+}
+
 .animate-none {
   animation: none;
 }
@@ -9084,6 +9091,14 @@ video {
 
 .animate-bounce {
   animation: bounce 1s infinite;
+}
+
+.animate-laptop-float {
+  animation: laptopFloat 2.5s ease-in-out infinite;
+}
+
+.animate-shadow-float {
+  animation: shadowFloat 2.5s ease-in-out infinite;
 }
 
 @media (min-width: 640px) {
@@ -11749,76 +11764,59 @@ video {
     height: 100vh;
   }
 
-  .sm\:text-xs {
+  .sm\:text-xxs {
     font-size: 10pt;
+    line-height: 20pt;
+  }
+
+  .sm\:text-xs {
+    font-size: 15pt;
+    line-height: 25pt;
   }
 
   .sm\:text-s {
     font-size: 20pt;
+    line-height: 30pt;
   }
 
   .sm\:text-m {
     font-size: 30pt;
+    line-height: 40pt;
+  }
+
+  .sm\:text-l {
+    font-size: 40pt;
+    line-height: 50pt;
   }
 
   .sm\:text-xl {
+    font-size: 50pt;
+    line-height: 60pt;
+  }
+
+  .sm\:text-xxl {
     font-size: 60pt;
+    line-height: 70pt;
   }
 
-  .sm\:leading-3 {
-    line-height: .75rem;
+  .sm\:leading-xs {
+    line-height: 10pt;
   }
 
-  .sm\:leading-4 {
-    line-height: 1rem;
+  .sm\:leading-s {
+    line-height: 20pt;
   }
 
-  .sm\:leading-5 {
-    line-height: 1.25rem;
+  .sm\:leading-m {
+    line-height: 30pt;
   }
 
-  .sm\:leading-6 {
-    line-height: 1.5rem;
+  .sm\:leading-l {
+    line-height: 50pt;
   }
 
-  .sm\:leading-7 {
-    line-height: 1.75rem;
-  }
-
-  .sm\:leading-8 {
-    line-height: 2rem;
-  }
-
-  .sm\:leading-9 {
-    line-height: 2.25rem;
-  }
-
-  .sm\:leading-10 {
-    line-height: 2.5rem;
-  }
-
-  .sm\:leading-none {
-    line-height: 1;
-  }
-
-  .sm\:leading-tight {
-    line-height: 1.25;
-  }
-
-  .sm\:leading-snug {
-    line-height: 1.375;
-  }
-
-  .sm\:leading-normal {
-    line-height: 1.5;
-  }
-
-  .sm\:leading-relaxed {
-    line-height: 1.625;
-  }
-
-  .sm\:leading-loose {
-    line-height: 2;
+  .sm\:leading-xl {
+    line-height: 70pt;
   }
 
   .sm\:list-inside {
@@ -17564,6 +17562,14 @@ video {
   .sm\:animate-bounce {
     animation: bounce 1s infinite;
   }
+
+  .sm\:animate-laptop-float {
+    animation: laptopFloat 2.5s ease-in-out infinite;
+  }
+
+  .sm\:animate-shadow-float {
+    animation: shadowFloat 2.5s ease-in-out infinite;
+  }
 }
 
 @media (min-width: 768px) {
@@ -20229,76 +20235,59 @@ video {
     height: 100vh;
   }
 
-  .md\:text-xs {
+  .md\:text-xxs {
     font-size: 10pt;
+    line-height: 20pt;
+  }
+
+  .md\:text-xs {
+    font-size: 15pt;
+    line-height: 25pt;
   }
 
   .md\:text-s {
     font-size: 20pt;
+    line-height: 30pt;
   }
 
   .md\:text-m {
     font-size: 30pt;
+    line-height: 40pt;
+  }
+
+  .md\:text-l {
+    font-size: 40pt;
+    line-height: 50pt;
   }
 
   .md\:text-xl {
+    font-size: 50pt;
+    line-height: 60pt;
+  }
+
+  .md\:text-xxl {
     font-size: 60pt;
+    line-height: 70pt;
   }
 
-  .md\:leading-3 {
-    line-height: .75rem;
+  .md\:leading-xs {
+    line-height: 10pt;
   }
 
-  .md\:leading-4 {
-    line-height: 1rem;
+  .md\:leading-s {
+    line-height: 20pt;
   }
 
-  .md\:leading-5 {
-    line-height: 1.25rem;
+  .md\:leading-m {
+    line-height: 30pt;
   }
 
-  .md\:leading-6 {
-    line-height: 1.5rem;
+  .md\:leading-l {
+    line-height: 50pt;
   }
 
-  .md\:leading-7 {
-    line-height: 1.75rem;
-  }
-
-  .md\:leading-8 {
-    line-height: 2rem;
-  }
-
-  .md\:leading-9 {
-    line-height: 2.25rem;
-  }
-
-  .md\:leading-10 {
-    line-height: 2.5rem;
-  }
-
-  .md\:leading-none {
-    line-height: 1;
-  }
-
-  .md\:leading-tight {
-    line-height: 1.25;
-  }
-
-  .md\:leading-snug {
-    line-height: 1.375;
-  }
-
-  .md\:leading-normal {
-    line-height: 1.5;
-  }
-
-  .md\:leading-relaxed {
-    line-height: 1.625;
-  }
-
-  .md\:leading-loose {
-    line-height: 2;
+  .md\:leading-xl {
+    line-height: 70pt;
   }
 
   .md\:list-inside {
@@ -26044,6 +26033,14 @@ video {
   .md\:animate-bounce {
     animation: bounce 1s infinite;
   }
+
+  .md\:animate-laptop-float {
+    animation: laptopFloat 2.5s ease-in-out infinite;
+  }
+
+  .md\:animate-shadow-float {
+    animation: shadowFloat 2.5s ease-in-out infinite;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -28709,76 +28706,59 @@ video {
     height: 100vh;
   }
 
-  .lg\:text-xs {
+  .lg\:text-xxs {
     font-size: 10pt;
+    line-height: 20pt;
+  }
+
+  .lg\:text-xs {
+    font-size: 15pt;
+    line-height: 25pt;
   }
 
   .lg\:text-s {
     font-size: 20pt;
+    line-height: 30pt;
   }
 
   .lg\:text-m {
     font-size: 30pt;
+    line-height: 40pt;
+  }
+
+  .lg\:text-l {
+    font-size: 40pt;
+    line-height: 50pt;
   }
 
   .lg\:text-xl {
+    font-size: 50pt;
+    line-height: 60pt;
+  }
+
+  .lg\:text-xxl {
     font-size: 60pt;
+    line-height: 70pt;
   }
 
-  .lg\:leading-3 {
-    line-height: .75rem;
+  .lg\:leading-xs {
+    line-height: 10pt;
   }
 
-  .lg\:leading-4 {
-    line-height: 1rem;
+  .lg\:leading-s {
+    line-height: 20pt;
   }
 
-  .lg\:leading-5 {
-    line-height: 1.25rem;
+  .lg\:leading-m {
+    line-height: 30pt;
   }
 
-  .lg\:leading-6 {
-    line-height: 1.5rem;
+  .lg\:leading-l {
+    line-height: 50pt;
   }
 
-  .lg\:leading-7 {
-    line-height: 1.75rem;
-  }
-
-  .lg\:leading-8 {
-    line-height: 2rem;
-  }
-
-  .lg\:leading-9 {
-    line-height: 2.25rem;
-  }
-
-  .lg\:leading-10 {
-    line-height: 2.5rem;
-  }
-
-  .lg\:leading-none {
-    line-height: 1;
-  }
-
-  .lg\:leading-tight {
-    line-height: 1.25;
-  }
-
-  .lg\:leading-snug {
-    line-height: 1.375;
-  }
-
-  .lg\:leading-normal {
-    line-height: 1.5;
-  }
-
-  .lg\:leading-relaxed {
-    line-height: 1.625;
-  }
-
-  .lg\:leading-loose {
-    line-height: 2;
+  .lg\:leading-xl {
+    line-height: 70pt;
   }
 
   .lg\:list-inside {
@@ -34524,6 +34504,14 @@ video {
   .lg\:animate-bounce {
     animation: bounce 1s infinite;
   }
+
+  .lg\:animate-laptop-float {
+    animation: laptopFloat 2.5s ease-in-out infinite;
+  }
+
+  .lg\:animate-shadow-float {
+    animation: shadowFloat 2.5s ease-in-out infinite;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -37189,76 +37177,59 @@ video {
     height: 100vh;
   }
 
-  .xl\:text-xs {
+  .xl\:text-xxs {
     font-size: 10pt;
+    line-height: 20pt;
+  }
+
+  .xl\:text-xs {
+    font-size: 15pt;
+    line-height: 25pt;
   }
 
   .xl\:text-s {
     font-size: 20pt;
+    line-height: 30pt;
   }
 
   .xl\:text-m {
     font-size: 30pt;
+    line-height: 40pt;
+  }
+
+  .xl\:text-l {
+    font-size: 40pt;
+    line-height: 50pt;
   }
 
   .xl\:text-xl {
+    font-size: 50pt;
+    line-height: 60pt;
+  }
+
+  .xl\:text-xxl {
     font-size: 60pt;
+    line-height: 70pt;
   }
 
-  .xl\:leading-3 {
-    line-height: .75rem;
+  .xl\:leading-xs {
+    line-height: 10pt;
   }
 
-  .xl\:leading-4 {
-    line-height: 1rem;
+  .xl\:leading-s {
+    line-height: 20pt;
   }
 
-  .xl\:leading-5 {
-    line-height: 1.25rem;
+  .xl\:leading-m {
+    line-height: 30pt;
   }
 
-  .xl\:leading-6 {
-    line-height: 1.5rem;
+  .xl\:leading-l {
+    line-height: 50pt;
   }
 
-  .xl\:leading-7 {
-    line-height: 1.75rem;
-  }
-
-  .xl\:leading-8 {
-    line-height: 2rem;
-  }
-
-  .xl\:leading-9 {
-    line-height: 2.25rem;
-  }
-
-  .xl\:leading-10 {
-    line-height: 2.5rem;
-  }
-
-  .xl\:leading-none {
-    line-height: 1;
-  }
-
-  .xl\:leading-tight {
-    line-height: 1.25;
-  }
-
-  .xl\:leading-snug {
-    line-height: 1.375;
-  }
-
-  .xl\:leading-normal {
-    line-height: 1.5;
-  }
-
-  .xl\:leading-relaxed {
-    line-height: 1.625;
-  }
-
-  .xl\:leading-loose {
-    line-height: 2;
+  .xl\:leading-xl {
+    line-height: 70pt;
   }
 
   .xl\:list-inside {
@@ -43003,5 +42974,13 @@ video {
 
   .xl\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .xl\:animate-laptop-float {
+    animation: laptopFloat 2.5s ease-in-out infinite;
+  }
+
+  .xl\:animate-shadow-float {
+    animation: shadowFloat 2.5s ease-in-out infinite;
   }
 }

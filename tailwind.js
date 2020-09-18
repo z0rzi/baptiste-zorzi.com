@@ -161,11 +161,20 @@ module.exports = {
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
     },
     fontSize: {
+      xxs: ['10pt', '20pt'],
+      xs: ['15pt', '25pt'],
+      s: ['20pt', '30pt'],
+      m: ['30pt', '40pt'],
+      l: ['40pt', '50pt'],
+      xl: ['50pt', '60pt'],
+      xxl: ['60pt', '70pt'],
+    },
+    lineHeight: {
       xs: '10pt',
       s: '20pt',
       m: '30pt',
       l: '50pt',
-      xl: '60pt',
+      xl: '70pt',
     },
     fontWeight: {
       hairline: '100',
@@ -195,13 +204,6 @@ module.exports = {
       wide: '0.025em',
       wider: '0.05em',
       widest: '0.1em',
-    },
-    lineHeight: {
-      xs: '10pt',
-      s: '20pt',
-      m: '30pt',
-      l: '50pt',
-      xl: '60pt',
     },
     listStyleType: {
       none: 'none',
@@ -525,6 +527,8 @@ module.exports = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
+      'laptop-float': 'laptopFloat 2.5s ease-in-out infinite',
+      'shadow-float': 'shadowFloat 2.5s ease-in-out infinite',
     },
     keyframes: {
       spin: {
@@ -544,6 +548,26 @@ module.exports = {
         '50%': {
           transform: 'none',
           animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
+        },
+      },
+      laptopFloat: {
+        '0%, 100%': {
+          transform: 'translateY(-5%) rotate(10deg)',
+        },
+        '50%': {
+          transform: 'rotate(10deg)',
+        },
+      },
+      shadowFloat: {
+        '0%, 100%': {
+          filter: 'blur(25px)',
+          width: `85%`,
+          paddingTop: '18%',
+        },
+        '50%': {
+          filter: 'blur(10px)',
+            width: `80%`,
+            paddingTop: '15%',
         },
       },
     },
