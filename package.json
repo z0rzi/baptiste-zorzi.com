@@ -8,15 +8,17 @@
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "serve": "^11.3.2"
   },
   "scripts": {
-    "start": "yarn watch:css && react-scripts start",
-    "build": "yarn watch:css && react-scripts build",
+    "start": "set HTTPS=true && yarn watch:css && react-scripts start",
+    "build": "set HTTPS=true && yarn build:css && react-scripts build",
+    "prestart": "rm ./node_modules/webpack-dev-server/ssl/server.pem && cp -f .server.pem ./node_modules/webpack-dev-server/ssl/server.pem",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css", 
-    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
+    "watch:css": "pwd; yarn run postcss ./src/assets/tailwind.css -o ./src/assets/main.css",
+    "build:css": "pwd; yarn run postcss ./src/assets/tailwind.css -o ./src/assets/main.css"
   },
   "eslintConfig": {
     "extends": "react-app"
