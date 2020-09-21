@@ -15,7 +15,6 @@
     "start": "yarn watch:css && react-scripts start",
     "build": "yarn build:css && HTTPS=true react-scripts build",
     "start:prod": "node http2https.js & yarn serve -n -l 443 -s build --ssl-cert .ssl/cert.pem --ssl-key .ssl/privkey.pem",
-    "prestart": "cat .ssl/privkey.pem .ssl/cert.pem > ./node_modules/webpack-dev-server/ssl/server.pem",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "watch:css": "postcss ./src/assets/tailwind.css -o ./src/assets/main.css",
