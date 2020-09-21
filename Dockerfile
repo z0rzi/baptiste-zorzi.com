@@ -1,10 +1,10 @@
-
 FROM node:14
 WORKDIR /usr/src/app
 COPY package*.json ./
 COPY . .
+VOLUME /etc/letsencrypt/live/baptiste-zorzi.com/
 RUN yarn
 RUN yarn build
-RUN cp -f .server.pem ./node_modules/webpack-dev-server/ssl/server.pem
-EXPOSE 5000
-CMD ["yarn", "run", "serve", "build"]
+EXPOSE 443
+EXPOSE 80
+CMD ["yarn", "start:prod"]

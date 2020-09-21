@@ -12,13 +12,14 @@
     "serve": "^11.3.2"
   },
   "scripts": {
-    "start": "set HTTPS=true && yarn watch:css && react-scripts start",
-    "build": "set HTTPS=true && yarn build:css && react-scripts build",
-    "prestart": "rm ./node_modules/webpack-dev-server/ssl/server.pem && cp -f .server.pem ./node_modules/webpack-dev-server/ssl/server.pem",
+    "start": "yarn watch:css && react-scripts start",
+    "build": "yarn build:css && HTTPS=true react-scripts build",
+    "start:prod": "node http2https.js & yarn serve -n -l 443 -s build --ssl-cert .ssl/cert.pem --ssl-key .ssl/privkey.pem",
+    "prestart": "cat .ssl/privkey.pem .ssl/cert.pem > ./node_modules/webpack-dev-server/ssl/server.pem",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "watch:css": "pwd; yarn run postcss ./src/assets/tailwind.css -o ./src/assets/main.css",
-    "build:css": "pwd; yarn run postcss ./src/assets/tailwind.css -o ./src/assets/main.css"
+    "watch:css": "postcss ./src/assets/tailwind.css -o ./src/assets/main.css",
+    "build:css": "postcss ./src/assets/tailwind.css -o ./src/assets/main.css"
   },
   "eslintConfig": {
     "extends": "react-app"
