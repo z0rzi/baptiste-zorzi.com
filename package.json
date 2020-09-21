@@ -1,0 +1,43 @@
+{
+  "name": "baptiste-zorzi.com",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "serve": "^11.3.2"
+  },
+  "scripts": {
+    "start": "yarn watch:css && react-scripts start",
+    "build": "yarn build:css && HTTPS=true react-scripts build",
+    "start:prod": "node http2https.js & yarn serve -n -l 443 -s build --ssl-cert .ssl/cert.pem --ssl-key .ssl/privkey.pem",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "watch:css": "postcss ./src/assets/tailwind.css -o ./src/assets/main.css",
+    "build:css": "postcss ./src/assets/tailwind.css -o ./src/assets/main.css"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "postcss-cli": "^7.1.2",
+    "tailwindcss": "^1.8.9"
+  }
+}
