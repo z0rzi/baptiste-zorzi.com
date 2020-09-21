@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  baptiste-zorzi:
+    image: z0rzi/baptiste-zorzi.com:latest
+    restart: unless-stopped
+    volumes:
+      - ~/ssl:/usr/src/app/.ssl:ro
+    ports: ["80:80", "443:443"]
