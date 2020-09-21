@@ -11,7 +11,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
+      - name: docker login
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
         
       - name: docker build
         run: |
           docker build . -t z0rzi/baptiste-zorzi.com
+        
+      - name: docker push
+        run: |
+          docker push -t z0rzi/baptiste-zorzi.com
