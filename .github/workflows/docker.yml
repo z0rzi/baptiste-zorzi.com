@@ -24,4 +24,4 @@ jobs:
         
       - name: docker push
         run: |
-          docker push -t z0rzi/baptiste-zorzi.com:latest
+          docker push z0rzi/baptiste-zorzi.com:latest
