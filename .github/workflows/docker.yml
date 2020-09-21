@@ -20,8 +20,8 @@ jobs:
         
       - name: docker build
         run: |
-          docker build -t 'z0rzi/baptiste-zorzi.com:latest' .
+          docker build -t z0rzi/baptiste-zorzi.com:latest
         
       - name: docker push
         run: |
-          docker push -t 'z0rzi/baptiste-zorzi.com:latest'
+          docker push -t z0rzi/baptiste-zorzi.com:latest
