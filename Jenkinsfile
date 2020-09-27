@@ -15,9 +15,9 @@ pipeline {
             agent any
             steps {
                 git (
+                    url: "${GIT_URL}"
                     branch: "${GIT_BRANCH}",
                     changelog: true,
-                    credentialsId: "${GIT_CREDENTIALS}"
                 )
                 sh '''
                     ls -al
