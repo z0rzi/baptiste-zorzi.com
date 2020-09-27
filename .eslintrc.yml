@@ -1,6 +1,10 @@
 env:
   browser: true
   es6: true
+overrides:
+  - files: [ "*.js" ]
+    rules: 
+      no-undef: off
 extends:
   - 'eslint:recommended'
   - 'plugin:react/recommended'

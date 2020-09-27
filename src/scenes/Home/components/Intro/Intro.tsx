@@ -6,7 +6,7 @@ class Intro extends Component {
 
     render(): JSX.Element {
         return (
-            <div>
+            <div className="mb-56">
                 <div className={`
                     block
                     align-middle
@@ -15,11 +15,11 @@ class Intro extends Component {
                     lg:inline-block
 
                 `}>
-                    <p className='text-m md:text-l lg:text-xxl'>
-              Salut, je suis Baptiste.
+                    <p className='text-introTitle'>
+                        Salut, je suis Baptiste.
                     </p>
                     <p className={`
-                        text-xs md:text-s lg:text-m
+                        text-introDesc
                         text-gray
                         mt-12 lg:mt-24
                     `}>

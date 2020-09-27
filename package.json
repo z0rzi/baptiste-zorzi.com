@@ -18,11 +18,11 @@
     "typescript": "^4.0.3"
   },
   "scripts": {
-    "start": "yarn watch:css && react-scripts start",
-    "build": "yarn build:css && HTTPS=true react-scripts build",
+    "start": "yarn watch:css && react-app-rewired start",
+    "build": "yarn build:css && HTTPS=true react-app-rewired build",
     "start:prod": "node http2https.js & yarn serve -n -l 443 -s build --ssl-cert .ssl/cert.pem --ssl-key .ssl/privkey.pem",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
     "watch:css": "postcss ./src/assets/tailwind.css -o ./src/assets/main.css",
     "build:css": "postcss ./src/assets/tailwind.css -o ./src/assets/main.css"
   },
@@ -45,8 +45,9 @@
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
     "autoprefixer": "^9.8.6",
-    "eslint": "^7.10.0",
     "postcss-cli": "^7.1.2",
+    "react-app-rewire-alias": "^0.1.6",
+    "react-app-rewired": "^2.1.6",
     "tailwindcss": "^1.8.9"
   }
 }

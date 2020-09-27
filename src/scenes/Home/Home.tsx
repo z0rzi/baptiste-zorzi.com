@@ -1,5 +1,6 @@
 import React from 'react';
 import Intro from './components/Intro/Intro';
+import Qualifications from './components/Qualifications/Qualifications';
 
 function App(): JSX.Element {
     return (
@@ -13,6 +14,9 @@ function App(): JSX.Element {
             lg:pl-24
         `}>
             <Intro />
+            <div className="container mx-auto">
+                <Qualifications />
+            </div>
         </div>
     );
 }
