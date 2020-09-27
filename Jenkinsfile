@@ -55,6 +55,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
+                    rm -rf /tmp/build-backup
+                    mv -f ${SERVER_DEPLOY_DIR}build /tmp/build-backup
                     mv -f build ${SERVER_DEPLOY_DIR}build
                 '''
             }
