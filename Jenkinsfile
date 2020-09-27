@@ -19,7 +19,7 @@ pipeline {
                     branch: "${GIT_BRANCH}",
                     url: "${GIT_URL}",
                     changelog: true,
-                    credentials: "${GIT_CREDENTIALS}"
+                    credentialsId: "${GIT_CREDENTIALS}"
                 )
                 sh '''
                     ls -al
