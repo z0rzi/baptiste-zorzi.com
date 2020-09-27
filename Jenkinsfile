@@ -8,6 +8,7 @@ pipeline {
 
         GIT_URL = "git@github.com:z0rzi/baptiste-zorzi.com.git"
         GIT_BRANCH = "feat/CI"
+        GIT_CREDENTIALS = "github"
     }
     agent none
     stages {
@@ -17,7 +18,8 @@ pipeline {
                 git (
                     branch: "${GIT_BRANCH}",
                     url: "${GIT_URL}",
-                    changelog: true
+                    changelog: true,
+                    credentials: "${GIT_CREDENTIALS}"
                 )
                 sh '''
                     ls -al
