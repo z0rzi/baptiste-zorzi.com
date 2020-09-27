@@ -6,7 +6,7 @@ pipeline {
 
         CACHE_DIR = "/var/nm_cache/baptiste-zorzi.com/"
 
-        GIT_URL = "git@github.com:z0rzi/baptiste-zorzi.com.git"
+        GIT_URL = "https://github.com/z0rzi/baptiste-zorzi.com.git"
         GIT_BRANCH = "feat/CI"
         GIT_CREDENTIALS = "github"
     }
