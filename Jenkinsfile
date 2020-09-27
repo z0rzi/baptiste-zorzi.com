@@ -7,8 +7,7 @@ pipeline {
         CACHE_DIR = "/var/nm_cache/baptiste-zorzi.com/"
 
         GIT_URL = "https://github.com/z0rzi/baptiste-zorzi.com.git"
-        GIT_BRANCH = "feat/CI"
-        GIT_CREDENTIALS = "github"
+        GIT_BRANCH = "refs/heads/feat/CI"
     }
     agent none
     stages {
@@ -17,7 +16,6 @@ pipeline {
             steps {
                 git (
                     branch: "${GIT_BRANCH}",
-                    url: "${GIT_URL}",
                     changelog: true,
                     credentialsId: "${GIT_CREDENTIALS}"
                 )
