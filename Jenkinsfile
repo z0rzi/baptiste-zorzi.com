@@ -7,7 +7,7 @@ pipeline {
         CACHE_DIR = "/tmp/nm_cache/baptiste-zorzi.com/"
 
         GIT_URL = "https://github.com/z0rzi/baptiste-zorzi.com.git"
-        GIT_BRANCH = "feat/CI"
+        GIT_BRANCH = "master"
         GIT_CREDENTIALS = "github"
     }
     agent any
