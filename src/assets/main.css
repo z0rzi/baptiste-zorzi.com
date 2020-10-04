@@ -3255,8 +3255,8 @@ video {
 }
 
 .text-m {
-  font-size: 30pt;
-  line-height: 40pt;
+  font-size: 27pt;
+  line-height: 37pt;
 }
 
 .text-l {
@@ -9062,8 +9062,8 @@ video {
 @keyframes shadowFloat {
   0%, 100% {
     filter: blur(25px);
-    width: 85%;
-    padding-top: 18%;
+    width: 75%;
+    padding-top: 13%;
   }
 
   50% {
@@ -11780,8 +11780,8 @@ video {
   }
 
   .sm\:text-m {
-    font-size: 30pt;
-    line-height: 40pt;
+    font-size: 27pt;
+    line-height: 37pt;
   }
 
   .sm\:text-l {
@@ -20251,8 +20251,8 @@ video {
   }
 
   .md\:text-m {
-    font-size: 30pt;
-    line-height: 40pt;
+    font-size: 27pt;
+    line-height: 37pt;
   }
 
   .md\:text-l {
@@ -28722,8 +28722,8 @@ video {
   }
 
   .lg\:text-m {
-    font-size: 30pt;
-    line-height: 40pt;
+    font-size: 27pt;
+    line-height: 37pt;
   }
 
   .lg\:text-l {
@@ -37193,8 +37193,8 @@ video {
   }
 
   .xl\:text-m {
-    font-size: 30pt;
-    line-height: 40pt;
+    font-size: 27pt;
+    line-height: 37pt;
   }
 
   .xl\:text-l {

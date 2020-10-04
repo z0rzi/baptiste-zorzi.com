@@ -164,7 +164,7 @@ module.exports = {
       xxs: ['10pt', '20pt'],
       xs: ['15pt', '25pt'],
       s: ['20pt', '30pt'],
-      m: ['30pt', '40pt'],
+      m: ['27pt', '37pt'],
       l: ['40pt', '50pt'],
       xl: ['50pt', '60pt'],
       xxl: ['60pt', '70pt'],
@@ -561,8 +561,8 @@ module.exports = {
       shadowFloat: {
         '0%, 100%': {
           filter: 'blur(25px)',
-          width: `85%`,
-          paddingTop: '18%',
+          width: `75%`,
+          paddingTop: '13%',
         },
         '50%': {
           filter: 'blur(10px)',
