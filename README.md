@@ -6,9 +6,10 @@ This is my website, which will shortly be accessible here: [baptiste-zorzi.com](
 
 ## Start
 
-To launch host the website, the easiest solution is to use the Docker container.
+To launch host the website, simply use `yarn` or `npm`
 
-You can launch it with docker compose:
 ```bash
-docker-compose up -d
+npm i && npm start
+# OR
+yarn && yarn start
 ```
