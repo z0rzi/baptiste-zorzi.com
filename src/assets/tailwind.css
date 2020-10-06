@@ -1,5 +1,32 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
+
+
+.text-introTitle { @apply text-10 }
+.text-introDesc { @apply text-6 }
+.text-title { @apply text-9 }
+.text-normal { @apply text-5 }
+.text-small { @apply text-3 }
+
+@screen md {
+    .text-introTitle { @apply text-12 }
+    .text-introDesc { @apply text-6 }
+    .text-title { @apply text-9 }
+    .text-normal { @apply text-5 }
+    .text-small { @apply text-4 }
+}
+@screen lg {
+    .text-introTitle { @apply text-18 }
+    .text-introDesc { @apply text-8 }
+    .text-title { @apply text-9 }
+    .text-normal { @apply text-5 }
+    .text-small { @apply text-4 }
+}
+@screen xl {
+    .text-introTitle { @apply text-20 }
+    .text-introDesc { @apply text-9 }
+    .text-title { @apply text-9 }
+    .text-normal { @apply text-5 }
+    .text-small { @apply text-4 }
+}

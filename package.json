@@ -6,17 +6,23 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.2",
+    "@types/react": "^16.9.50",
+    "@types/react-dom": "^16.9.8",
+    "eslint-plugin-react": "^7.21.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
-    "serve": "^11.3.2"
+    "serve": "^11.3.2",
+    "typescript": "^4.0.3"
   },
   "scripts": {
-    "start": "yarn watch:css && react-scripts start",
-    "build": "yarn build:css && HTTPS=true react-scripts build",
+    "start": "yarn watch:css && react-app-rewired start",
+    "build": "yarn build:css && HTTPS=true react-app-rewired build",
     "start:prod": "node http2https.js & yarn serve -n -l 443 -s build --ssl-cert .ssl/cert.pem --ssl-key .ssl/privkey.pem",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
     "watch:css": "postcss ./src/assets/tailwind.css -o ./src/assets/main.css",
     "build:css": "postcss ./src/assets/tailwind.css -o ./src/assets/main.css"
   },
@@ -36,8 +42,12 @@
     ]
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
     "autoprefixer": "^9.8.6",
     "postcss-cli": "^7.1.2",
+    "react-app-rewire-alias": "^0.1.6",
+    "react-app-rewired": "^2.1.6",
     "tailwindcss": "^1.8.9"
   }
 }

@@ -1,34 +1,36 @@
 import React, {Component} from 'react';
 
-class Shadow extends Component {
+class Shadow extends Component<{image: string}, {[tag: string]: unknown}> {
 
-    constructor() {
-        super()
+    private image: string;
 
-        this.state = {}
+    constructor({image}: {image: string}) {
+        super({image});
+        this.image = image;
+
+        this.state = {};
     }
 
-    render() {
+    render(): JSX.Element {
         const shadowStyles = {
             display: 'block',
             height: '0',
-            width: `80%`,
+            width: '80%',
             paddingTop: '15%',
             borderRadius: '100%',
             background: '#22222215',
             filter: 'blur(10px)',
             left: '50%',
             transform: 'translateX(-50%)'
-        }
+        };
 
         const imageStyles = {
             transform: 'rotate(10deg)'
-        }
-
+        };
 
         return (
             <div className="relative">
-                <img src={this.props.image} style={imageStyles} alt='' className='w-full mx-auto animate-laptop-float'/>
+                <img src={this.image} style={imageStyles} alt='' className='w-full mx-auto animate-laptop-float'/>
                 <div className='absolute mx-auto animate-shadow-float' style={shadowStyles}></div>
             </div>
         );
