@@ -1,4 +1,4 @@
-import * as tailwind from '@root/tailwind';
+import * as colors from '@root/colors';
 
 type ColorType = 'red'|'green'|'yellow';
 export class Color {
@@ -29,6 +29,8 @@ export class Color {
         if (this.value === null)
             throw new Error('Can\'t get the hexadecimal code of an undefined color!');
 
-        return tailwind.theme.colors[this.value];
+        // console.log(tailwind.theme.colors);
+        // return '#000000';
+        return colors[this.value];
     }
 }

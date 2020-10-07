@@ -18,18 +18,7 @@ module.exports = {
             lg: '1024px',
             xl: '1280px',
         },
-        colors: {
-            transparent: 'transparent',
-            current: 'currentColor',
-
-            white: '#F6F6F6',
-            black: '#3F3B3D',
-            dark: '#616161',
-            gray: '#9E9E9E',
-            yellow: '#E5C762',
-            green: '#68BEA3',
-            red: '#D17680'
-        },
+        colors: require('./colors'),
         spacing: {
             px: '1px',
             '0': '0',
