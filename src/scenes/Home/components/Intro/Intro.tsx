@@ -16,7 +16,7 @@ class Intro extends Component {
 
                 `}>
                     <p className='text-introTitle'>
-                        Salut, je suis Baptiste.
+                        Bonjour, je suis Baptiste.
                     </p>
                     <p className={`
                         text-introDesc
