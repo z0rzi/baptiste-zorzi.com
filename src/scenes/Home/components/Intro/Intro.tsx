@@ -6,7 +6,7 @@ class Intro extends Component {
 
     render(): JSX.Element {
         return (
-            <div className="mb-56">
+            <div className="mb-56 py-16 lg:py-40">
                 <div className={`
                     block
                     align-middle

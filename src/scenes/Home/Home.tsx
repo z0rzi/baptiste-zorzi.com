@@ -1,6 +1,8 @@
 import React from 'react';
 import Intro from './components/Intro/Intro';
+import Navbar from './components/Navbar/Navbar';
 import Qualifications from './components/Qualifications/Qualifications';
+import { Element as ScrollElem } from 'react-scroll';
 
 function App(): JSX.Element {
     return (
@@ -9,13 +11,14 @@ function App(): JSX.Element {
             min-h-full
             font-sans
             text-black
-            py-16 lg:py-40
+            pb-16 lg:pb-40
             p-8 md:p-12 lg:p-0
             lg:pl-24
         `}>
-            <Intro />
+            <Navbar />
+            <ScrollElem name="intro"><Intro /></ScrollElem>
             <div className="container mx-auto">
-                <Qualifications />
+                <ScrollElem name="qualifications"><Qualifications /></ScrollElem>
             </div>
         </div>
     );

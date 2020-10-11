@@ -18,9 +18,9 @@ class Qualification extends Component<QualificationData, { [state: string]: unkn
         const title: JSX.Element[] = [];
 
         normal.forEach((txt: string, idx: number) => {
-            title.push(<>{txt}</>);
+            title.push(<span key={idx}>{txt}</span>);
             if (emph !== null && idx in emph) {
-                title.push(<span className={`text-${this.props.color.value} font-bold`}>{emph[idx].replace(/[[\]]/g, '')}</span>);
+                title.push(<span key={'emph-'+idx} className={`text-${this.props.color.value} font-bold`}>{emph[idx].replace(/[[\]]/g, '')}</span>);
             }
         });
 
