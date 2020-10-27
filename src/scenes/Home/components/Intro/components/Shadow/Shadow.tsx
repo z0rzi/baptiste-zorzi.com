@@ -4,9 +4,9 @@ class Shadow extends Component<{image: string}, {[tag: string]: unknown}> {
 
     private image: string;
 
-    constructor({image}: {image: string}) {
-        super({image});
-        this.image = image;
+    constructor(props: {image: string}) {
+        super(props);
+        this.image = props.image;
 
         this.state = {};
     }
@@ -30,8 +30,8 @@ class Shadow extends Component<{image: string}, {[tag: string]: unknown}> {
 
         return (
             <div className="relative">
-                <img src={this.image} style={imageStyles} alt='' className='w-full mx-auto animate-laptop-float'/>
-                <div className='absolute mx-auto animate-shadow-float' style={shadowStyles}></div>
+                <img src={this.image} style={imageStyles} alt='' className='w-full mx-auto lg:animate-laptop-float'/>
+                <div className='absolute mx-auto lg:animate-shadow-float' style={shadowStyles}></div>
             </div>
         );
     }

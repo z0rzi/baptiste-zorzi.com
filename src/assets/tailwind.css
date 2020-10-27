@@ -30,3 +30,33 @@
     .text-normal { @apply text-5 }
     .text-small { @apply text-4 }
 }
+
+.bold-if-active.active {
+    font-weight: bold;
+}
+
+
+.burger {
+    transition-duration: .3s;
+}
+.burger span { @apply bg-black }
+.burger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 5px 0 5px 0;
+    border-radius: 4px;
+}
+.burger.gone span {
+    transform: translateY(-50px);
+    opacity: 0;
+}
+.burger.gone span:nth-child(1) { transition: transform .3s 0s ease-in-out  , opacity .3s 0s ease-in-out; }
+.burger.gone span:nth-child(2) { transition: transform .3s .1s ease-in-out , opacity .3s .1s ease-in-out; }
+.burger.gone span:nth-child(3) { transition: transform .3s .15s ease-in-out, opacity .3s .15s ease-in-out; }
+.burger span:nth-child(1) { transition: transform .3s .15s ease-out,opacity .3s .15s ease-out, all .3s; }
+.burger span:nth-child(2) { transition: transform .3s .1s ease-out ,opacity .3s .1s ease-out , all .3s; }
+.burger span:nth-child(3) { transition: transform .3s 0s ease-out  ,opacity .3s 0s ease-out  , all .3s; }
+
+.burger.compressed span { @apply bg-gray }
+.burger.compressed span { width: 4px; }

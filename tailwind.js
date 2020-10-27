@@ -202,11 +202,12 @@ module.exports = {
             'full+20': '120%',
             screen: '100vh',
         }),
-        inset: {
+        inset: (theme) => ({
+            ...theme('spacing'),
             '0': '0',
             '1/2': '50%',
             auto: 'auto',
-        },
+        }),
         letterSpacing: {
             tighter: '-0.05em',
             tight: '-0.025em',
@@ -338,11 +339,11 @@ module.exports = {
         zIndex: {
             auto: 'auto',
             '0': '0',
-            '10': '10',
-            '20': '20',
-            '30': '30',
-            '40': '40',
-            '50': '50',
+            '1': '1',
+            '2': '2',
+            '3': '3',
+            '4': '4',
+            '5': '5',
         },
         gap: theme => theme('spacing'),
         gridTemplateColumns: {
