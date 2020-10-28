@@ -6,6 +6,7 @@ import MobileNav from './components/MobileNav/MobileNav';
 const PARTS = [
     { title: 'Accueil', link: 'intro' },
     { title: 'Diplomes', link: 'qualifications' },
+    { title: 'Contacts', link: 'contacts' },
 ];
 
 class Navbar extends Component<{ [prop: string]: unknown }, { opened: boolean }> {
