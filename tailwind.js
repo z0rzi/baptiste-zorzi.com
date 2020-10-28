@@ -13,10 +13,7 @@ module.exports = {
     separator: ':',
     theme: {
         screens: {
-            sm: '640px',
-            md: '768px',
-            lg: '1024px',
-            xl: '1280px',
+            ...require('./screensize').stringValues
         },
         colors: require('./colors'),
         spacing: {
@@ -150,7 +147,7 @@ module.exports = {
                 '"Noto Color Emoji"',
             ],
             serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
-            mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+            mono: ['Ubuntu Mono', 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
         },
         fontSize: {
             '0':  ['6px',  '7px'],

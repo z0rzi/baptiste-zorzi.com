@@ -541,7 +541,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Ubuntu Mono, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /**
@@ -3040,7 +3040,7 @@ video {
 }
 
 .font-mono {
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Ubuntu Mono, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .font-hairline {
@@ -10400,6 +10400,9 @@ video {
 .burger span:nth-child(3) { transition: transform .3s 0s ease-out  ,opacity .3s 0s ease-out  , all .3s;
 }
 
+.burger.compressed { padding: 0 10px
+}
+
 .burger.compressed span { --bg-opacity: 1; background-color: #9E9E9E; background-color: rgba(158, 158, 158, var(--bg-opacity))
 }
 
@@ -12870,7 +12873,7 @@ video {
   }
 
   .sm\:font-mono {
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Ubuntu Mono, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .sm\:font-hairline {
@@ -22532,7 +22535,7 @@ video {
   }
 
   .md\:font-mono {
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Ubuntu Mono, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .md\:font-hairline {
@@ -32194,7 +32197,7 @@ video {
   }
 
   .lg\:font-mono {
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Ubuntu Mono, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .lg\:font-hairline {
@@ -41856,7 +41859,7 @@ video {
   }
 
   .xl\:font-mono {
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Ubuntu Mono, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .xl\:font-hairline {

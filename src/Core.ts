@@ -1,4 +1,5 @@
 import * as colors from '@root/colors';
+import { intValues as screensizes } from '@root/screensize';
 
 type ColorType = 'red' | 'green' | 'yellow';
 export class Color {
@@ -38,6 +39,19 @@ export class Color {
     }
 }
 
+export class ScreenSize {
+    static get currentSize(): number {
+        return window.document.body.offsetWidth;
+    }
+    static isMobile(): boolean {
+        return this.currentSize < screensizes.lg;
+    }
+    static whenChangeCall(fn: () => unknown): void {
+        WindowWatcher.instance.listenTo('resize', 'above', screensizes.lg, fn);
+        WindowWatcher.instance.listenTo('resize', 'below', screensizes.lg, fn);
+    }
+}
+
 export class Debouncer {
     private _debounceTimer = 0;
     private _timeoutID: NodeJS.Timeout | null = null;
@@ -72,7 +86,7 @@ export class Debouncer {
 
 type Listener = { id: number, limit: number, when: 'above' | 'below', callback: (() => unknown) };
 export class WindowWatcher {
-    static _instance: WindowWatcher|null = null;
+    static _instance: WindowWatcher | null = null;
     private lastID = 0;
     private _htmlElem: HTMLElement | null = null;
     private scrollAmount = 0;
@@ -147,7 +161,7 @@ export class WindowWatcher {
         return this._htmlElem;
     }
 
-    listenTo(what: 'resize'|'scroll', when: 'above' | 'below', limit: number, callback: (() => unknown)): number {
+    listenTo(what: 'resize' | 'scroll', when: 'above' | 'below', limit: number, callback: (() => unknown)): number {
         this.lastID++;
 
         if (what === 'resize') {
@@ -169,11 +183,11 @@ export class WindowWatcher {
     }
 
     stopListening(id: number): void {
-        let idx = this.scrollListeners.findIndex(({id: id0}) => id === id0);
+        let idx = this.scrollListeners.findIndex(({ id: id0 }) => id === id0);
 
         if (idx === -1) {
             // it's probably a resize listener
-            idx = this.resizeListeners.findIndex(({id: id0}) => id === id0);
+            idx = this.resizeListeners.findIndex(({ id: id0 }) => id === id0);
             if (idx === -1) return;
             this.resizeListeners.splice(idx, 1);
             return;

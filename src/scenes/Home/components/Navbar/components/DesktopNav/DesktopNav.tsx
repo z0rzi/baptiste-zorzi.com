@@ -142,7 +142,7 @@ class DesktopNav extends Component<
                                     style={style}
                                 >
                                     <Link
-                                        className="bold-if-active"
+                                        className="bold-if-active cursor-pointer"
                                         activeClass="active"
                                         to={link}
                                         spy={true}
@@ -154,7 +154,7 @@ class DesktopNav extends Component<
                         }
                     </ul>
                 </div>
-                <div className="fixed invisible">
+                <div className="absolute invisible">
                     <ul ref={element => this.listRef = element}>
                         {
                             this.props.sections.map(part =>
