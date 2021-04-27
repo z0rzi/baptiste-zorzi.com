@@ -12,11 +12,12 @@ services:
   nginx:
     build: ./nginx
     volumes:
-      - front_build:/usr/share/nginx/html:ro
-      - /var/ssl/:/etc/nginx/certs/:ro
+      - front_build:/html/:ro
+      - /var/ssl/:/ssl/:ro
     ports:
       - 80:80
-      - 8000:80
+      - 443:443
+
     restart: always
 
 

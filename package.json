@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "yarn watch:css && react-app-rewired start",
-    "build": "yarn build:css && HTTPS=true react-app-rewired build",
+    "build": "yarn build:css && HTTPS=true BUILD_PATH='./build' react-app-rewired build",
     "start:prod": "node http2https.js & yarn serve -n -l 443 -s build --ssl-cert .ssl/cert.pem --ssl-key .ssl/privkey.pem",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
