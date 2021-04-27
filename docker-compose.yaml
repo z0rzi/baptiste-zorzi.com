@@ -1,0 +1,24 @@
+version: "3.3"
+
+services:
+  baptiste-zorzi:
+    build: .
+    volumes:
+      - front_build:/build/
+    working_dir: /app
+    command: cp -r /app/build/ /
+    restart: 'no'
+
+  nginx:
+    build: ./nginx
+    volumes:
+      - front_build:/usr/share/nginx/html:ro
+      - /var/ssl/:/etc/nginx/certs/:ro
+    ports:
+      - 80:80
+      - 8000:80
+    restart: always
+
+
+volumes:
+  front_build:
